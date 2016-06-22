@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
 
-  get 'users/new'
 
   root 'welcome#index'
+  get 'users/signup' => 'users#new'
+  post 'users/signup' => 'users#create'
 
     resources :articles do
        resources :comments
